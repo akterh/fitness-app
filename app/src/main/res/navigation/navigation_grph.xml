@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_grph"
+    app:startDestination="@id/start2">
+
+    <fragment
+        android:id="@+id/start2"
+        android:name="com.example.bodyfitnessapp.StartFragment"
+        android:label="fragment_start"
+        tools:layout="@layout/fragment_start" >
+        <action
+            android:id="@+id/action_start2_to_exerciseFragments"
+            app:destination="@id/exerciseFragments" />
+        <action
+            android:id="@+id/action_start2_to_exerciseFragments2"
+            app:destination="@id/exerciseFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/exerciseFragments"
+        android:name="com.example.bodyfitnessapp.ExerciseFragments"
+        android:label="fragment_exercise_fragments"
+        tools:layout="@layout/fragment_exercise_fragments" >
+        <action
+            android:id="@+id/action_exerciseFragments_to_wellDoneFragment"
+            app:destination="@id/wellDoneFragment"
+            app:popUpTo="@id/exerciseFragments"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_exerciseFragments_to_tryAgainFragment"
+            app:destination="@id/tryAgainFragment"
+            app:popUpTo="@id/exerciseFragments"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/wellDoneFragment"
+        android:name="com.example.bodyfitnessapp.WellDoneFragment"
+        android:label="fragment_well_done"
+        tools:layout="@layout/fragment_well_done" >
+        <action
+            android:id="@+id/action_wellDoneFragment_to_exerciseFragments"
+            app:destination="@id/exerciseFragments"
+            app:popUpTo="@id/exerciseFragments" />
+    </fragment>
+    <fragment
+        android:id="@+id/tryAgainFragment"
+        android:name="com.example.bodyfitnessapp.TryAgainFragment"
+        android:label="fragment_try_again"
+        tools:layout="@layout/fragment_try_again" >
+        <action
+            android:id="@+id/action_tryAgainFragment_to_exerciseFragments"
+            app:destination="@id/exerciseFragments"
+            app:popUpTo="@id/exerciseFragments" />
+    </fragment>
+</navigation>
