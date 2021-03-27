@@ -10,6 +10,8 @@
     <string name="gotxt">GO</string>
     <string name="tryAgain">Try Again</string>
     <string name="nextWork">Next Workout</string>
+    <string name="about">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley</string>
+    <string name="title_about">About</string>
 
 
 </resources>
